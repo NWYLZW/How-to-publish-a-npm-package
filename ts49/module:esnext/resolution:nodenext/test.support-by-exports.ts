@@ -1,5 +1,5 @@
 import { foo } from '@yje/how-to-publish-a-typescript-package.support-by-exports'
-import { bar } from '@yje/how-to-publish-a-typescript-package.support-by-exports/sub'
+import { bar } from '@yje/how-to-publish-a-typescript-package.support-by-exports/dist/sub'
 
 const t0 = foo()
 //    ^?
