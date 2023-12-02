@@ -8,10 +8,48 @@
 
 首先，我们要搞清楚目标用户到底是谁？直接看表格：
 
-| TypeScript 版本 | module | resolution | 类型提供方式 | 是否可用 |
-| --- | --- | --- | --- | --- |
-| 4.9 | commonjs | --- | exports 不导出类型，只通过 typesVersions 向外部提供 | ✅❎ |
-| 4.9 | nodenext | --- | exports 不导出类型，只通过 typesVersions 向外部提供 | ✅❎ |
+| TypeScript | module   | resolution | how to support                      | supported |
+|------------|----------|------------|-------------------------------------|-----------|
+| 4.9        | commonjs | ---        | exports no type, only typesVersions | ✔︎        |
+| 4.9        | commonjs | ---        | directory                           | ✔︎        |
+| 4.9        | commonjs | ---        | exports                             | ✖︎        |
+| 4.9        | commonjs | ---        | typesVersions                       | ✔︎        |
+| 4.9        | esnext   | node       | exports no type, only typesVersions | ✔︎        |
+| 4.9        | esnext   | node       | directory                           | ✔︎        |
+| 4.9        | esnext   | node       | exports                             | ✖︎        |
+| 4.9        | esnext   | node       | typesVersions                       | ✔︎        |
+| 4.9        | esnext   | nodenext   | exports no type, only typesVersions | ✔︎        |
+| 4.9        | esnext   | nodenext   | directory                           | ✔︎        |
+| 4.9        | esnext   | nodenext   | exports                             | ✖︎        |
+| 4.9        | esnext   | nodenext   | typesVersions                       | ✔︎        |
+| 4.9        | nodenext | ---        | exports no type, only typesVersions | ✔︎        |
+| 4.9        | nodenext | ---        | directory                           | ✔︎        |
+| 4.9        | nodenext | ---        | exports                             | ✖︎        |
+| 4.9        | nodenext | ---        | typesVersions                       | ✔︎        |
+| 5.x        | commonjs | bundler    | exports no type, only typesVersions | ✖︎        |
+| 5.x        | commonjs | bundler    | directory                           | ✔︎        |
+| 5.x        | commonjs | bundler    | exports                             | ✔︎        |
+| 5.x        | commonjs | bundler    | typesVersions                       | ✔︎        |
+| 5.x        | commonjs | nodenext   | exports no type, only typesVersions | ✖︎        |
+| 5.x        | commonjs | nodenext   | directory                           | ✔︎        |
+| 5.x        | commonjs | nodenext   | exports                             | ✔︎        |
+| 5.x        | commonjs | nodenext   | typesVersions                       | ✔︎        |
+| 5.x        | esnext   | bundler    | exports no type, only typesVersions | ✖︎        |
+| 5.x        | esnext   | bundler    | directory                           | ✔︎        |
+| 5.x        | esnext   | bundler    | exports                             | ✔︎        |
+| 5.x        | esnext   | bundler    | typesVersions                       | ✔︎        |
+| 5.x        | esnext   | nodenext   | exports no type, only typesVersions | ✔︎        |
+| 5.x        | esnext   | nodenext   | directory                           | ✔︎        |
+| 5.x        | esnext   | nodenext   | exports                             | ✔︎        |
+| 5.x        | esnext   | nodenext   | typesVersions                       | ✔︎        |
+| 5.x        | nodenext | bundler    | exports no type, only typesVersions | ✖︎        |
+| 5.x        | nodenext | bundler    | directory                           | ✔︎        |
+| 5.x        | nodenext | bundler    | exports                             | ✔︎        |
+| 5.x        | nodenext | bundler    | typesVersions                       | ✔︎        |
+| 5.x        | esnext   | nodenext   | exports no type, only typesVersions | ✔︎        |
+| 5.x        | esnext   | nodenext   | directory                           | ✔︎        |
+| 5.x        | esnext   | nodenext   | exports                             | ✔︎        |
+| 5.x        | esnext   | nodenext   | typesVersions                       | ✔︎        |
 
 对表格中对一些名词进行解释：
 
