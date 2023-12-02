@@ -2,5 +2,6 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "module": "CommonJS"
-  }
+  },
+  "include": ["resolution:bundler", "resolution:node", "resolution:node-next"]
 }

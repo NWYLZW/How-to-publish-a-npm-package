@@ -1,4 +1,5 @@
 {
   "compilerOptions": {
-  }
+  },
+  "include": ["module:commonjs", "module:esnext", "module:nodenext"]
 }
