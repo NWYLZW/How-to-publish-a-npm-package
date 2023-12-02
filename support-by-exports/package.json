@@ -1,0 +1,38 @@
+{
+  "name": "@yje/how-to-publish-a-typescript-package.support-by-exports",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.esm.js"
+      },
+      "module": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./sub": {
+      "import": {
+        "types": "./dist/sub/index.d.ts",
+        "default": "./dist/sub/index.esm.js"
+      },
+      "module": {
+        "types": "./dist/sub/index.d.ts",
+        "default": "./dist/sub/index.mjs"
+      },
+      "require": {
+        "types": "./dist/sub/index.d.ts",
+        "default": "./dist/sub/index.js"
+      }
+    }
+  }
+}

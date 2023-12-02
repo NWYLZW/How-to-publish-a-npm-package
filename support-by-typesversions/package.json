@@ -1,0 +1,13 @@
+{
+  "name": "@yje/how-to-publish-a-typescript-package.support-by-typesversions",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      ".": ["dist/index.d.ts"],
+      "sub": ["dist/sub/index.d.ts"]
+    }
+  }
+}

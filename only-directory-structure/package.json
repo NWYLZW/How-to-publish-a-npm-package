@@ -1,0 +1,7 @@
+{
+  "name": "@yje/how-to-publish-a-typescript-package.only-directory-structure",
+  "version": "0.1.0",
+  "main": "index.js",
+  "module": "index.mjs",
+  "types": "index.d.ts"
+}

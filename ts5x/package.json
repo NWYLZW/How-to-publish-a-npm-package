@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "ts5x",
+  "version": "1.0.0",
+  "dependencies": {
+    "@yje/how-to-publish-a-typescript-package.only-directory-structure": "file:../only-directory-structure",
+    "@yje/how-to-publish-a-typescript-package.support-by-exports": "file:../support-by-exports",
+    "@yje/how-to-publish-a-typescript-package.support-by-typesversions": "file:../support-by-typesversions",
+    "typescript": "^5.3.2"
+  }
+}
