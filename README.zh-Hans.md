@@ -26,30 +26,14 @@
 | 4.9        | nodenext | ---        | directory                           | ✔︎        |
 | 4.9        | nodenext | ---        | exports                             | ✖︎        |
 | 4.9        | nodenext | ---        | typesVersions                       | ✔︎        |
-| 5.x        | commonjs | bundler    | exports no type, only typesVersions | ✖︎        |
-| 5.x        | commonjs | bundler    | directory                           | ✔︎        |
-| 5.x        | commonjs | bundler    | exports                             | ✔︎        |
-| 5.x        | commonjs | bundler    | typesVersions                       | ✔︎        |
-| 5.x        | commonjs | nodenext   | exports no type, only typesVersions | ✖︎        |
-| 5.x        | commonjs | nodenext   | directory                           | ✔︎        |
-| 5.x        | commonjs | nodenext   | exports                             | ✔︎        |
-| 5.x        | commonjs | nodenext   | typesVersions                       | ✔︎        |
 | 5.x        | esnext   | bundler    | exports no type, only typesVersions | ✖︎        |
 | 5.x        | esnext   | bundler    | directory                           | ✔︎        |
 | 5.x        | esnext   | bundler    | exports                             | ✔︎        |
 | 5.x        | esnext   | bundler    | typesVersions                       | ✔︎        |
-| 5.x        | esnext   | nodenext   | exports no type, only typesVersions | ✔︎        |
-| 5.x        | esnext   | nodenext   | directory                           | ✔︎        |
-| 5.x        | esnext   | nodenext   | exports                             | ✔︎        |
-| 5.x        | esnext   | nodenext   | typesVersions                       | ✔︎        |
-| 5.x        | nodenext | bundler    | exports no type, only typesVersions | ✖︎        |
-| 5.x        | nodenext | bundler    | directory                           | ✔︎        |
-| 5.x        | nodenext | bundler    | exports                             | ✔︎        |
-| 5.x        | nodenext | bundler    | typesVersions                       | ✔︎        |
-| 5.x        | esnext   | nodenext   | exports no type, only typesVersions | ✔︎        |
-| 5.x        | esnext   | nodenext   | directory                           | ✔︎        |
-| 5.x        | esnext   | nodenext   | exports                             | ✔︎        |
-| 5.x        | esnext   | nodenext   | typesVersions                       | ✔︎        |
+| 5.x        | nodenext | nodenext   | exports no type, only typesVersions | ✔︎        |
+| 5.x        | nodenext | nodenext   | directory                           | ✔︎        |
+| 5.x        | nodenext | nodenext   | exports                             | ✔︎        |
+| 5.x        | nodenext | nodenext   | typesVersions                       | ✔︎        |
 
 对表格中对一些名词进行解释：
 
@@ -63,3 +47,9 @@
     唉，不能用 `*` 不然 ts 就会死给用户看，局限性很大。也无法处理 condition。
   - `types`：在这里指的是在 package.json 中声明的[类型文件](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)。\
     这个是最简单的，但是也是最不灵活的，因为你只能提供一个类型文件，而且你无法通过这个方式提供多个版本的类型文件。
+
+以开发者导出方式来看待的话
+`directory` 兼容性满分，不管在哪种用户使用情况下都是绝对可以的
+`exports no type, only typesVersions` 在 4.9 下可以无脑使用，但是在 5.x 下 module: commonjs`、`resolution: bundler 情况下无法正确为用户提供类型
+`exports` 的类型导出无法在 ts4.9 下使用，在 ts 5.x 上兼容性满分，在不考虑低版本 ts 用户时可以无脑使用
+`typesVersions` 和 `directory` 是一个等级的存在，就是不支持 `conditional export`，没办法区分导出 esm 和 cjs 包的类型，在没有 node 环境需要区分时可以无脑使用
