@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "ts49+module:nodenext",
+  "name": "ts49+module:esnext+resolution:node",
   "version": "1.0.0",
   "dependencies": {
     "@yje/how-to-publish-a-typescript-package.only-directory-structure": "file:../only-directory-structure",
