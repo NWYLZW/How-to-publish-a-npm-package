@@ -6,8 +6,7 @@
   "types": "dist/index.d.ts",
   "typesVersions": {
     "<5.0": {
-      ".": ["dist/index.d.ts"],
-      "sub": ["dist/sub/index.d.ts"]
+      "*": ["*", "dist/*", "dist/*/index.d.ts"]
     }
   },
   "exports": {
