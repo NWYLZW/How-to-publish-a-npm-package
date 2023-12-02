@@ -6,6 +6,7 @@
     "@yje/how-to-publish-a-typescript-package.only-directory-structure": "file:../only-directory-structure",
     "@yje/how-to-publish-a-typescript-package.support-by-exports": "file:../support-by-exports",
     "@yje/how-to-publish-a-typescript-package.support-by-typesversions": "file:../support-by-typesversions",
+    "@yje/how-to-publish-a-typescript-package.support-by-typesversions-and-exports": "file:../support-by-typesversions-and-exports",
     "@yje/how-to-publish-a-typescript-package.exports-no-type-support-type-by-typesversions": "file:../exports-no-type-support-type-by-typesversions",
     "typescript": "^4.9.5"
   }
