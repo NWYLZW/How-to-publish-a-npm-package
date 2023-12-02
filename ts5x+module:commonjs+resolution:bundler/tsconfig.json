@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "CommonJS",
     "moduleResolution": "bundler",
     "target": "es5",
     "sourceMap": true
