@@ -3,6 +3,7 @@
   "name": "ts49+module:commonjs",
   "version": "1.0.0",
   "dependencies": {
+    "@yje/how-to-publish-a-typescript-package.exports-but-extension": "file:../exports-but-extension",
     "@yje/how-to-publish-a-typescript-package.only-directory-structure": "file:../only-directory-structure",
     "@yje/how-to-publish-a-typescript-package.support-by-exports": "file:../support-by-exports",
     "@yje/how-to-publish-a-typescript-package.support-by-typesversions": "file:../support-by-typesversions",
