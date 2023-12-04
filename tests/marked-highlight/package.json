@@ -1,0 +1,8 @@
+{
+  "name": "test.marked-highlight",
+  "version": "1.0.0",
+  "dependencies": {
+    "marked-highlight": "^2.0.8",
+    "typescript": "^4.9.5"
+  }
+}
