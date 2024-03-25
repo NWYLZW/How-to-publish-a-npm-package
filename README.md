@@ -59,3 +59,7 @@ From the perspective of the developer's export method:
 Combining specific use, we can use `exports` + `typesVersions` for publishing.\
 In this case, we can use `exports` to support the recognition mechanism of higher versions of ts, and use `typesVersions` to support the recognition mechanism of lower versions of ts.\
 But we need a dividing line, from which version do we start using `exports`? This is critical, here we can use 4.7 and 5.0 as the dividing points for judgment, to see which scenario covers a wider range.
+
+## Other
+
+* If you choose to use `exports`, don't forget to export `package.json`. Your users might need to access the dependency data through your package. If you don't do this, they might have to calculate the path, which could be very inconvenient for them.
